@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <meta name="author" content="Anna Musiał">
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 12px;
+        }
+        h1{
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        // validating name
+        function cf1name(){
+            let field = document.getElementById("name").value;
+            if (field.length>=2){
+                document.getElementById("message1n").innerHTML = "Input accepted!";
+            } else{
+                document.getElementById("message1n").innerHTML = "Please use at least two letters!";
+            }            
+        }
+        // validating  surname
+        function cf2surname(){
+            let field = document.getElementById("surnamename").value;
+            if (field.length>=2){
+                document.getElementById("message2s").innerHTML = "Input accepted!";
+            } else{
+                document.getElementById("message2s").innerHTML = "Please use at least two letters!";
+            }            
+        }
+        // validating phone number
+        function cf3number(){
+            let field = document.getElementById("phone").value;
+            if(field.length == 9) {
+                document.getElementById("message3s").innerHTML = "Input accepted!";
+            } else {
+                document.getElementById("message3s").innerHTML = "Please check if you provided nine numbers!"
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <!-- Create an HTML page with a header and body section that includes a form.
+    The form should have at least 5 input fields and one button (not an input type submit button - since we have no server to submit to).
+    At least one of these input fields should be validated using JavaScript on an onblur event. -->
+
+    <header><h1>Please fill in the form below</h1></header>
+    <div>
+        <form action="emailto:aiwmusial@gmail.com" method="POST">
+            <table>
+                <tr><td>Name *</td><td><input type="text" name="name" id="name" placeholder="Xxxx" required onblur="cf1name();"></td><td><span id="message1n">&nbsp;</span></td></tr>
+                <tr><td>Surname *</td><td><input type="text" name="surname" id="surnamename" placeholder="Xxxx" required onblur="cf2surname();"></td><td><span id="message2s">&nbsp;</span></td></tr>
+                <tr><td>Phone Country Code</td><td><input type="text" name="code" id="cCode" placeholder="+XX / +XXX"></td><td></td></tr>
+                <tr><td>Phone Number *</td><td><input type="tel" name="phone" id="phone" placeholder="XXX-XXX-XXX" required onblur="cf3number();"></td><td><span id="message3s">&nbsp;</span></td></tr>
+                <tr><td>Email Address *</td><td><input type="email" name="email" id="email" placeholder="xx@xx.xxx" required></td><td></td></tr>
+                <tr><td>Date of birth</td><td><input type="date" name="dbirth" id="dbirth" placeholder="XX/XX/XXXX"></td><td></td></tr>
+                <tr><td>Submitt the information provided</td><td><input type="submit" value="submit"></td><td></td></tr>
+
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>
