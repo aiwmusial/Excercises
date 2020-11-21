@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu w CSS</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+        }
+        body{
+            width: 1000px;
+            margin-top: 2%;
+            margin-left: auto;
+        }
+        #mainMenu{
+            color: #250558;
+            height: 25px;
+        }
+        #mainMenu ul li a{
+            text-decoration: none;
+            padding: 5px;
+            margin-right: 5px;
+            background-color: #33bcc4;
+        }
+        #mainMenu ul li{
+            display: block;
+            float: left;
+        }
+
+        #mainMenu ul li a:hover{
+            background-color: #94bbbd;
+        }
+        #leftMenu {
+            float: left;
+        }
+        #leftMenu #topM{
+            text-decoration: none;
+            height: 30px;
+            width: 100px;
+            padding-left: 5px;
+            background-color: #24b3b8;
+            color: #250558;
+            overflow: hidden;
+            color: #ffffff;
+        }
+        
+        #leftMenu #topM{
+            margin: 0;
+        }
+        #leftMenu #topM ul{
+            list-style-type: none;
+        }
+        #leftMenu #topM ul li:hover{
+            background-color: grey;
+        }
+        #leftMenu #topM:hover{
+            height: 75px;
+        }
+        #leftMenu #bottomM{
+            text-decoration: none;
+            height: 30px;
+            width: 100px;
+            padding-left: 5px;
+            background-color: #24b3b8;
+            color: #250558;
+            overflow: hidden;
+            color: #ffffff;
+        }
+        
+        #leftMenu #bottomM{
+            margin-top: 5px;
+        }
+        #leftMenu #bottomM ul{
+            list-style-type: none;
+        }
+        #leftMenu #bottomM ul li:hover{
+            background-color: grey;
+        }
+        #leftMenu #bottomM:hover{
+            height: 80px;
+        }
+        
+        #sec{
+            float: left;
+            width: 500px;
+            text-align: justify;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainMenu">
+        <ul>
+                <li><a href="">Strona Glowna</a> </li>
+                <li><a href="">Podstrona 1</a> </li>
+                <li><a href="">Podstrona 2</a> </li>
+                <li><a href="">Podstrona 3</a> </li>
+                <li><a href="">Podstrona 4</a> </li>
+        </ul>
+    </nav>
+    <nav id="leftMenu">
+        <div id="topM">
+            <p>menu 1</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+            </ul>
+        </div>
+        <div id="bottomM">
+            <p>menu 2</p>
+            <ul>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+            </ul>
+        </div>
+    </nav>
+    <section id="sec">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat unde totam numquam nulla provident delectus quae dolorem consequuntur laborum velit ipsa, repellat veritatis debitis ex doloremque accusantium perferendis harum ullam? Dolore, nostrum harum a voluptatem voluptates rerum officiis eveniet ullam nulla totam nisi quis odit hic rem delectus deserunt fugit iusto ducimus placeat culpa. Doloribus totam illum ipsam consequatur. Animi a nesciunt reprehenderit, vero, odio beatae possimus laborum labore fugiat molestias eos? Accusantium voluptatibus vero error enim dolores placeat rem sed, eius doloribus illo odit, rerum incidunt earum corrupti necessitatibus voluptate sapiente ut! Officiis enim blanditiis ut illo rem!</section>
+</body>
+</html>

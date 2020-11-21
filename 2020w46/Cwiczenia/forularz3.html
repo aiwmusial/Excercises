@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rormularz 3</title>
+    <meta name="author" content="Anna Musiał">
+    <style>
+        form{
+            width: 150px;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="mailto:aiwmusial@gmai.com" method="POST">
+        <fieldset>
+            <legend>Dane Osobowe</legend>
+            <table>
+                <tr><td>Imię:</td><td><input type="text" name="name" id="imie" placeholder="Name"></td></tr>
+                <tr><td>Nazwisko:</td><td><input type="text" name="surname" id="nazwisko" placeholder="Surname"></td></tr>
+                <tr><td><td><input type="radio" name="plec" id="F">Kobieta</td></tr>
+                <tr><td></td><td><input type="radio" name="plec" id="M">Mężczyzna</tr>
+            </table>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Twoje pytanie:</legend>
+            <label for="question">Adresat:</label>
+            <select name="adresat" id="adresat">
+                <optgroup label="Dział sprzedaży">
+                    <option>Jan Kowalski</option>
+                 </optgroup>
+                <optgroup label="Dział Marketingu">
+                    <option>Anna Nowak</option>
+                    <option>Magda Gessler</option>
+                </optgroup>
+            </select>
+            <br>
+            <br>
+            <textarea name="Message" id="message" cols="30" rows="10"></textarea>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

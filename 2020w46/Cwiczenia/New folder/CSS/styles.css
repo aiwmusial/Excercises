@@ -1,0 +1,56 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17303b;
+}
+h1{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+h2{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+h4{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+p{
+    text-align: center;
+}
+div{
+    border: #0e587a 2px solid;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+#zwierz{
+    list-style-type: circle;
+}
+#ludz{
+    list-style-type: square;
+}
+section{
+    float: left;
+}
+.sectionLR{
+    box-sizing: border-box;
+    border: teal 3px solid;
+    width: 42%;
+    margin-top: 25px;
+    text-align: justify;
+    padding: 10px;
+    background-color: wheat;
+}
+#sectionL{
+    float: left;
+    margin-left: 5%;
+    margin-right: 6px;
+}
+#sectionR{
+    float: right;
+    margin-right: 5%;   
+}

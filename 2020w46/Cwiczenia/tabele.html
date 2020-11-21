@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='author' content="Anna Musiał">
+    <title>Tabele</title>
+    <style>
+        .t1, th, td{
+            border: 2px solid black;
+            color: grey;
+        }
+        .t1 th{
+            color:black;
+            background-color: cornflowerblue;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table class="t1"><tr><th>Imię i nazwisko:</th><th>Data Urodzenia:</th></tr>
+    <tr><td>Anna Nowak </td><td>1985-01-01</td></tr><tr><td>Jan Nowak</td><td>1975-01-02</td></tr></table><br>
+
+    <table class=t1><tr><th>Pracownik:</th><th>Zarobki:</th><th>Data zatrudnienia:</th></tr>
+        <tr><td>Ala Makota</td><td>2,000.0</td><td>2020-01-01</td></tr>
+        <tr><td>Olo Molo</td><td>3,000.0</td><td>2020-01-01</td></tr>
+    </table><br>
+
+    <table>
+        <tr><th>ID</th><th>Nazwisko</th><th>Minimum:</th><th>Maximum:</th></tr>
+        <tr><td>1</td><td>Nowak</td><td>2</td><td>5</td></tr>   
+        <tr><td>2</td><td>Kowalski</td><td colspan="2">1-3</td></tr> 
+        <tr><td>3</td><td>Adamski</td><td rowspan="2">5</td><td>10</td></tr>
+        <tr><td>4</td><td>Kowalik</td><td>15</td></tr>
+    </table>
+</body>
+</html>

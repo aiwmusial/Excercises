@@ -1,0 +1,13 @@
+#newsy {
+    text-decoration: none;
+    color: papayawhip;
+    width: 508px;
+    height: 174px;
+    display: block;
+}
+#newsy:link, #newsy:active, #newsy:visited {
+    background-image: url('../grafika/link.png');
+}
+#newsy:hover {
+    background-image: url('../grafika/hover.png');
+}

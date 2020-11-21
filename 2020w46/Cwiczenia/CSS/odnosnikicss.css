@@ -1,0 +1,17 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-size: 12px;
+}
+ a:visited{
+    color: hotpink;
+    text-decoration: indigo;
+}
+a:link{
+    color: orange;
+}
+a:hover{
+    color: green;
+    font-size: 1.5em;
+    text-decoration: none;
+}

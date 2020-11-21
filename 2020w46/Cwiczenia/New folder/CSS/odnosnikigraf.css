@@ -1,0 +1,28 @@
+#newsy {
+    text-decoration: none;
+    color: papayawhip;
+    width: 508px;
+    height: 174px;
+    display: block;
+}
+#newsy:link, #newsy:active, #newsy:visited {
+    background-image: url('../grafika/link.png');
+}
+#newsy:hover {
+    background-image: url('../grafika/hover.png');
+}
+#ogorek{
+    width: 587px;
+    height: 391px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #15b61d;
+    padding: 15px;
+}
+#warzywa{
+    width: 640px;
+    height: 901px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
