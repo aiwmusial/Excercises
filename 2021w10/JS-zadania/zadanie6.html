@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 6</title>
+</head>
+<body>
+    <!-- Write an app calculating how much money do you need to become a milionare in 10 years time. Assume the compound interest of 3%. -->
+ <script>
+   window.onload = function(){
+    document.getElementById('calculate').onclick = function(){
+      let endValue = Number(document.getElementById('endValue').value);
+      let capNumber = document.getElementById('capNumber').value;
+      let numYears = Number(document.getElementById('numYears').value);
+      let percentIncr = Number(document.getElementById('percentIncr').value)/100;
+      let timeCap = 1;
+      
+      switch (capNumber){
+        case 'monthly': 
+        timeCap = 12;
+          break;
+        case 'quarterly': 
+        timeCap = 4;
+          break;
+      }
+      if (numYears===1){
+        document.getElementById('rokLat').innerHTML = 'rok';
+      } else if(numYears<5){
+        document.getElementById('rokLat').innerHTML = 'lata';
+      }
+      else{
+        document.getElementById('rokLat').innerHTML = 'lat';
+      }
+      if (endValue > 0){
+        let requiredCap = endValue/(Math.pow(1+(percentIncr/timeCap)), timeCap*numYears);
+        document.getElementById('requiredCap').innerHTML = `Wymagany kapitał początkowy, aby uzyskać ${endValue}zł na lokacie ${percentIncr*100}% to ${requiredCap}.`;
+      }else{
+        document.getElementById('requiredCap').innerHTML = `Twoja docelowa kwota (${endValue}zł) jest mniejsza niż 0!`
+      }
+    }
+   }
+  </script>
+
+   <table>
+     <tr><td>Kapitał końcowy</td><td><input type="number" id="endValue"></td><td>zł</td></tr>
+     <tr><td>Liczba kapitalizacji w roku</td><td>
+       <select name="Liczba Capitalizacji w roku" id="capNumber">
+         <option value="monthly">Miesięczna</option>
+         <option value="quarterly">Kwartalna</option>
+         <option value="yearly">roczna</option>
+        </select></td><td></td></tr>
+     <tr><td>Liczba lat</td><td><input type="number" id="numYears"></td><td id="rokLat"></td></tr>
+     <tr><td>Nominalna roczna stopa procentowa</td><td><input type="number" id="percentIncr" value="1"></td><td>%</td></tr>
+     <tr> <td colspan="3"><button id="calculate">Oblicz</button></td></tr>
+     <tr><td>Kapitał początkowy</td><td id="requiredCap"></td><td>zł</td></tr>
+   </table>
+
+</body>
+</html> 

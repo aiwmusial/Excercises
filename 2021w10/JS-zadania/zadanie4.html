@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+</head>
+<body>
+    <!-- Napisz aplikację, która dla podanej liczby wylicza silnię. -->
+    <script>
+        window.onload = function(){
+            document.getElementById('silniaLiczby').onclick = function(){
+                let num1 = Number(document.getElementById('num1').value);
+                if (num1<0){
+                    document.getElementById('wynik'). innerHTML = 'Nie można wyliczyć silnii liczby mniejszej od zera!';
+                }else if(num1===0){
+                    document.getElementById('wynik'). innerHTML = `Silnia twojej liczby ${num1} to 1!`;
+                }else{
+                    // silnia liczby
+                    let i = 1;
+                    for(let n = 1; n<=num1; n++){
+                        i*=n;
+                    }
+                    document.getElementById('wynik'). innerHTML = `Silnia twojej liczby ${num1} to ${i}!`;
+                }
+            }
+
+        }
+    </script>
+        <p>Wpisz wybraną przez siebie liczbę i wylicz jej silnię!</p>
+    <table>
+        <tr>
+            <td>Wpisz liczbę:</td>
+            <td><input type="number" id="num1"></td>
+          </tr>
+          <tr>
+            <td><button id="silniaLiczby">Sprawdź silnię podanej liczby</button></td>
+            <td id="wynik"></td>
+          </tr>
+    </table>
+</body>
+</html>

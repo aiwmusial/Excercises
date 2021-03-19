@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+</head>
+<body>
+    <!-- Napisz aplikację, która dla podanej liczby sprawdza czy jest ona liczbą
+pierwszą. -->
+<script>
+    window.onload = function(){
+        document.getElementById('czyPierwsza').onclick = function(){
+            let num1 = Number(document.getElementById('num1').value);
+            if(num1<=1){
+                document.getElementById('wynik').innerHTML = `Twoja liczba ${num1} nie jest liczbą pierwszą!`;
+            }else{
+                array1 = [];
+                for (let i=2; i<num1; i++){
+                    array1.push(num1%i);
+                    console.log(array1);
+                };
+                if(array1.indexOf(0)!==-1){
+                    document.getElementById('wynik').innerHTML = `Twoja liczba ${num1} jest liczbą złożoną!`;
+                }else{
+                    document.getElementById('wynik').innerHTML = `Twoja liczba ${num1} jest liczbą pierwszą!`;
+                }
+            }
+            }
+        }
+</script>
+<p>Wpisz wybraną przez siebie liczbę i sprawdź czy jest liczbą pierwszą!</p>
+<table>
+    <tr>
+        <td>Wpisz liczbę:</td>
+        <td><input type="number" id="num1"></td>
+      </tr>
+      <tr>
+        <td><button id="czyPierwsza">Sprawdź czy liczba jest liczbą pierwszą</button></td>
+        <td id="wynik"></td>
+      </tr>
+</table>
+</body>
+</html>

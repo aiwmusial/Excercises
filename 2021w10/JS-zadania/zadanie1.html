@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1</title>
+</head>
+<body>
+    <!-- Napisz aplikację, która pobiera dane z dwóch pól
+tekstowych. Następnie po kliknięciu na przycisk w
+paragrafie wypisywana jest ich średnia. Dodaje pogrubienie
+do wypisywanego tekstu.
+ -->
+ <script>
+     window.onload = function() {
+        document.getElementById('averageCalc').onclick = function(){
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            let srednia = (num1+num2)/2;
+            document.getElementById('avgNum').innerHTML = srednia;
+        }
+    };
+
+ </script>
+<table>
+    <tr>
+        <td>First Number</td>
+        <td><input type="number" id="num1"></td>
+      </tr>
+      <tr>
+        <td>Second Number</td>
+        <td><input type="number" id="num2"></td>
+      </tr>
+      <tr>
+        <td><button id="averageCalc">Average</button></td>
+        <td id="avgNum"></td>
+
+      </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+    </head>
+<body>
+    <!-- Napisz aplikację, która dla podanej liczby sprawdza czy jest ona
+liczbą parzystą. Wprowadź stosowny komentarz opisujący
+działanie algorytmu. -->
+<script>
+    window.onload = function(){
+        document.getElementById('czyParzysta').onclick=function(){
+            let num1 = Number(document.getElementById('num1').value);
+            if (num1%2 == 0){
+                document.getElementById('wynik').innerHTML = 'Liczba jest parzysta!';
+            }else{
+                document.getElementById('wynik').innerHTML = 'Liczba jest nieparzysta!';
+            }
+        }
+    }
+</script>
+<p>Wpisz wybraną przez siebie liczbę i sprawdź czy jest liczbą parzystą!</p>
+<table>
+    <tr>
+        <td>Wpisz liczbę:</td>
+        <td><input type="number" id="num1"></td>
+      </tr>
+      <tr>
+        <td><button id="czyParzysta">Sprawdź czy liczba jest parzysta</button></td>
+        <td id="wynik"></td>
+      </tr>
+</table>
+</body>
+</html>

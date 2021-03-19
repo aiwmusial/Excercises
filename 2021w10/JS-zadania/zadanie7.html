@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 7</title>
+</head>
+<body>
+    <!-- Napisz aplikację, która dla podanych 2 liczb wypisuje jaki jest dla nich
+największy wspólny dzielnik. Algorytm napisz jako osobną metodę.
+ -->
+ <script>
+     window.onload = function (){
+         document.getElementById('calculate').onclick = function(){
+             let num1 = Number(document.getElementById('num1').value);
+             let num2 = Number(document.getElementById('num2').value);
+             let arrNum = [];
+             let num = Math.min(num1, num2);
+             for(n=1; n<=num; n++){
+                 if(num1%n==0 && num2%n==0){
+                     arrNum.push(n);
+                 }
+             }
+             let gcd = Math.max(...arrNum);
+
+             console.log(arrNum);
+             console.log(gcd);
+             document.getElementById('num3').innerHTML = gcd;
+         }
+     }
+
+ </script>
+ <table>
+     <tr><td>Wpisz pierwszą liczbę:</td><td><input type="number" id="num1"></td></tr>
+     <tr><td>Wpisz drugą liczbę:</td><td><input type="number" id="num2"></td></tr>
+     <tr><td>Największy wspólny dzielnik to:</td><td id="num3"> </td></tr>
+ </table>
+ <button id="calculate">Calculate!</button>
+</body>
+</html>
