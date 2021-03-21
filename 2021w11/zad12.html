@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Zadanie 12</title>
+  </head>
+  <body>
+<!-- Napisz aplikację, w której użytkownik w pole tekstowe prowadza
+tekst nazwa produktu: cena waluta, np. laptop: 2000 zł. Po
+kliknięciu na przycisk wypisywane są pod sobą: nazwa produktu,
+cena i waluta. -->
+<script>
+  function myFunction(){
+    let myText = String(document.getElementById('myText').value);
+    let searchNum = /[0-9]/g;
+    let priceExt = myText.match(searchNum);
+    let indexFN = priceExt[0];
+    let lengthpriceExt = priceExt.length-1;
+    let indexLN = priceExt[lengthpriceExt];
+    let lengthMyText = myText.length-1;
+    let indexFNMyText = myText.indexOf(indexFN);
+    let indexLNMyText = indexFNMyText+lengthpriceExt+1;
+    let product = myText.slice(0, indexFNMyText);
+    let price = myText.slice(indexFNMyText, indexLNMyText);
+    let currency = myText.slice(indexLNMyText, lengthMyText+1);
+    
+    document.getElementById('product').innerHTML = product;
+    document.getElementById('price').innerHTML = price;
+    document.getElementById('currency').innerHTML = currency;
+    
+  }
+</script>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="myText">Wpisz nazwe produktu, cenę i walutę</label> 
+      <p class="text-muted">np. laptop 2500 zł</p>
+      <input type="text" id="myText">
+      <button onclick="myFunction()">Prześlij dane</button>
+      <table class="table mt-5 table-primary">
+        <tr><th>produkt</th><td id="product"></td></tr>
+        <tr><th>cena</th><td id="price"></td></tr>
+        <tr><th>waluta</th><td id="currency"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 13</title>
+    </head>
+<body>
+    <!-- Dla aplikacji „liczba parzysta” lub innej z podawaniem w
+pole tekstowe wartości liczbowej dodaj sprawdzanie czy
+użytkownik podał liczbę. -->
+<script>
+    window.onload = function(){
+        document.getElementById('czyParzysta').onclick=function(){
+            let num1 = Number(document.getElementById('num1').value);
+            if (isNaN(num1)){
+                document.getElementById('wynik').innerHTML = 'Proszę wpisz liczbę!';
+            }else if (num1%2 == 0){
+                document.getElementById('wynik').innerHTML = 'Liczba jest parzysta!';
+            }else{
+                document.getElementById('wynik').innerHTML = 'Liczba jest nieparzysta!';
+            }
+        }
+    }
+</script>
+<p>Wpisz wybraną przez siebie liczbę i sprawdź czy jest liczbą parzystą!</p>
+<table>
+    <tr>
+        <td>Wpisz liczbę:</td>
+        <td><input type="text" id="num1"></td>
+      </tr>
+      <tr>
+        <td><button id="czyParzysta">Sprawdź czy liczba jest parzysta</button></td>
+        <td id="wynik"></td>
+      </tr>
+</table>
+</body>
+</html>
