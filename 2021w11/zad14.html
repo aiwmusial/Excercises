@@ -28,11 +28,15 @@ osobą pełnoletnią.
             let dateOfBirth = document.getElementById('dateOfBirth').value;
             let dOb = new Date(dateOfBirth);
             let todaySdate = new Date();
+            let toBe18 = (18-((todaySdate - dOb)/ 1000 / 60 / 60 / 24 / 365.25));
+            let leftToBe18Years = Math.floor(toBe18);
+            let leftToBe18Months = Math.floor((toBe18 - Math.floor(toBe18))*365.25/30);
+            let leftToBe18Days = Math.floor((((toBe18 - Math.floor(toBe18))*365.25/30) - Math.floor((toBe18 - Math.floor(toBe18))*365.25/30))*30);
            
             if((todaySdate - dOb)/ 1000 / 60 / 60 / 24 / 365.25 >= 18){
                 document.getElementById('wynik').innerHTML = 'Gratulujemy! Jesteś osobą pełnoletnią! Możesz przejść dalej!';
             }else{
-                document.getElementById('wynik').innerHTML = 'Jeszcze brakuje ci trochę do osiągnięcia pełnoletności! Do zobaczenia wkrótce!';
+                document.getElementById('wynik').innerHTML = `Jeszcze brakuje ci ${leftToBe18Years} lat ${leftToBe18Months} miesięcy i ${leftToBe18Days} dni do osiągnięcia pełnoletności! Do zobaczenia wkrótce!`;
             }
 
         }

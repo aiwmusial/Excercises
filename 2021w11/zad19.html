@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 19</title>
+</head>
+<body>
+    <!-- Dodaj do strony zegar. -->
+    <script>
+        window.onload = function zegar(){
+            let currentTime = new Date();
+            let hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            let seconds = currentTime.getSeconds();
+            hours = addZero(hours);
+            minutes = addZero(minutes);
+            seconds = addZero(seconds);
+            
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+            
+            let UpdateTime = setTimeout(zegar,500);
+        }
+        function addZero(i){
+            if(i<10){
+                i = "0"+ i;
+            }
+            return i;
+        }
+
+    </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <table>
+                    <tr><td colspan="3">Current Time</td></tr>
+                    <tr><td id="hours"></td><td id="minutes"></td><td id="seconds"></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
